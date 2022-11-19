@@ -1,0 +1,38 @@
+* {
+   padding: 0;
+   margin: 0;
+   font-size: 18px;
+}
+a {
+   text-decoration: none;
+   color: black
+}
+.greater {
+   font-size: 125%;
+   font-weight: bold;
+}
+.hover {
+   cursor: pointer;
+}
+.hover:hover {
+   font-weight: bold;
+}
+
+input {
+   border: none;  
+   border-bottom: 3px solid black;
+   padding: 10px;
+   width: 100%;
+   border-image-slice: 1;
+   border-image-source: linear-gradient(to right, #f2b386, #eb081b);
+}
+
+input:focus {
+   border: none
+}
+
+@media only screen and (orientation: portrait) {
+   .illustration {
+      display: none;
+   }
+}

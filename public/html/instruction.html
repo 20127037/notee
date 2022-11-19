@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lumen/bootstrap.min.css"
+      integrity="sha384-GzaBcW6yPIfhF+6VpKMjxbTx6tvR/yRd/yJub90CqoIn2Tz4rRXlSpTFYMKHCifX"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+   <link rel="stylesheet" href="../css/shared.css">
+   <link rel="stylesheet" href="../css/instruction.css">
+   <title> Notee </title>
+</head>
+
+<body>
+
+   <div id="navigation" style="position: absolute; inset: 0px 0 0 2.5vw; height: 100px; width: 95vw; display: flex; justify-content: space-between; align-items: center; z-index: 1; background-color: white;">
+
+      <div style="width: 120px; display: flex; gap: 10px; align-items: center">
+         <img src="../media/icon.png" alt="icon" width="50px">
+         <a href="/" class="greater"> NOTEE </a>
+      </div>
+
+      <div style="position: relative;">
+         <div
+            style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgb(11, 27, 67); box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; display: flex; justify-content: center; align-items: center;"
+            class="hover" id="person">
+            <img src="../media/person.jpg" alt="" width="50%">
+         </div>
+
+         <div id="info" style="display: none; width: max-content; height: max-content; padding: 10px; position: absolute; inset: 45px 0 0 -200%; z-index: 1; background-color: white; border: 1px solid darkblue; border-radius: 5px;">
+            <div id="fullname"> </div>
+            <a href="/app/change-password"> Change password </a>
+            <br>
+            <a href="/log-out"> Log out </a>
+         </div>
+      </div>
+
+   </div>
+
+   <div style="margin: 100px 20vw 0 20vw">
+      <h1 style="text-align: center; padding: 10px; margin: 20px 0; background: rgb(245, 220, 220); border-radius: 10px;"> Ultimate guideline to master using this application </h1>
+      
+      <p style="color: rgb(20, 134, 64)" class="greater"> 1. Add new note </p>
+      <p> Simply need to click on the <i> Add </i> button in the navigation bar. <br> Afterwards, a modal will pop up prior to ask you fill in some information fields. <br> The final step is clicking on the <i> Save </i> button. </p>
+      
+      <p style="color: rgb(20, 71, 134)" class="greater"> 2. View full content of specific note </p>
+      <p> Click arbitrarily on a row to open its extended content. </p>
+      
+      <p style="color: rgb(124, 134, 20)" class="greater"> 3. Modify note </p>
+      <p style="font-weight: bold;"> &#9830; Modify status </p>
+      <p> Make a click right on the table, cell that specifies the current status </i> to toggle it. </p>
+      <p style="font-weight: bold;"> &#9830; Modify content </p>
+      <p> Repeat the steps of the second guide. <br> After that, click on the <i> Modify </i> button and start to edit your note. </p>
+      
+      <p style="color: rgb(134, 20, 60)" class="greater"> 4. Delete note </p>
+      <p> Repeat the steps of the second guide. <br> Click on the <i> Delete </i> button to immediately delete the note. </p>
+
+      <p style="color: rgb(179, 40, 146)" class="greater"> 5. Search for note </p>
+      <p> Type in any keywords (accept querying for both title and content), press <i> Enter </i> and the result will immediately be seen. </p>
+
+      <p style="color: rgb(169, 102, 19)" class="greater"> 6. Filter the table </p>
+      <p style="font-weight: bold;"> &#9830; Hide specific status </p>
+      <p> Click on the <i> Filter </i> button. <br> Hover the <i> right </i> arrow in order to view 2 available options. </p>
+      <p style="font-weight: bold;"> &#9830; Arrange by time </p>
+      <p> Click on the <i> Filter </i> button. <br> Hover the <i> right </i> arrow in order to view 2 available options. </p>
+   </div>
+
+   <script type="module" src="../js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lumen/bootstrap.min.css"
+      integrity="sha384-GzaBcW6yPIfhF+6VpKMjxbTx6tvR/yRd/yJub90CqoIn2Tz4rRXlSpTFYMKHCifX"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+   <link rel="stylesheet" href="../css/shared.css">
+   <link rel="stylesheet" href="../css/app.css">
+   <title> Notee </title>
+</head>
+
+<body>
+
+   <div id="navigation"
+      style="position: fixed; inset: 0px 0 0 2.5vw; height: 100px; width: 95vw; display: flex; justify-content: space-between; align-items: center; z-index: 1; background-color: white;">
+
+      <div style="width: 120px; display: flex; gap: 10px; align-items: center">
+         <img src="../media/icon.png" alt="icon" width="50px">
+         <a href="/" class="greater"> NOTEE </a>
+      </div>
+
+
+      <div id="command" style="display: flex; gap: 20px">
+
+         <button type="button" class="btn btn-primary" id="add-button"> Add </button>
+
+         <div class="btn-group" role="group">
+            <div class="btn btn-success"> Filter </div>
+            <div id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+               aria-haspopup="true">
+            </div>
+
+            <div id="filter-list" class="dropdown">
+               <div
+                  style="display: flex; justify-content: space-between; align-items: center; gap: 0 20px; position: relative;">
+                  <p> Hide specific status </p>
+                  <p class="greater" id="hide-arrow"> &#8227; </p>
+                  <div id="hide-menu" class="dropdown" style="position: absolute; inset: -50px 0 0 100%">
+                     <p class="hover"> Hide done notes </p>
+                     <p class="hover"> Hide undone notes </p>
+                  </div>
+               </div>
+
+               <div
+                  style="display: flex; justify-content: space-between; align-items: center; gap: 0 20px; position: relative;">
+                  <p> Arrange by time </p>
+                  <p class="greater" id="arrange-arrow"> &#8227; </p>
+                  <div id="arrange-menu" class="dropdown" style="position: absolute; inset: -10px 0 0 100%">
+                     <p class="hover"> From oldest to newest </p>
+                     <p class="hover"> From newest to oldest </p>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+
+      <label id="note-searcher-label" for="note-searcher" style="display: flex; align-items: baseline; margin: 0;">
+         <p class="greater"> &#128210; </p>
+         <input type="text" name="" id="note-searcher" placeholder="Type in anything">
+      </label>
+
+
+
+      <div style="position: relative;">
+         <div
+            style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgb(11, 27, 67); box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; display: flex; justify-content: center; align-items: center;"
+            class="hover" id="person">
+            <img src="../media/person.jpg" alt="" width="50%">
+         </div>
+
+         <div id="info" class="dropdown" style="width: 270px; inset: 45px 0 0 -250px; padding-bottom: 20px">
+            <div id="fullname"> </div>
+            <a href="/app/change-password"> Change password </a>
+            <br>
+            <a href="/log-out"> Log out </a>
+         </div>
+      </div>
+
+
+   </div>
+
+   <div id="second-navigation" style="position: fixed; width: 95vw; top: 100px; left: 2.5vw; display: flex; justify-content: space-between; align-items: center;"> </div>
+
+   <table id="table" style="width: 80vw; margin: 100px 0 0 10vw">
+      <thead>
+         <tr>
+            <th> Time created </th>
+            <th> Title </th>
+            <th> Content </th>
+            <th> Status </th>
+         </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+   </table>
+
+   <div
+      style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgb(11, 27, 67); box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; display: flex; justify-content: center; align-items: center; position: fixed; bottom: 3vh; right: 2vw"
+      class="hover">
+      <a href="/instruction" style="font-size: 150%"> &#63; </a>
+   </div>
+
+   <div id="add-form" class="modal">
+      <div class="close-button"> &#10005; </div>
+
+      <label for="new-title" class='greater' style="margin: 10px 20px;">
+         <p class="greater" style="margin-top: 5px; color: rgb(159, 159, 41)"> Title </p>
+         <input type="text" style="min-width: 100%;" name="" id="new-title">
+      </label>
+
+
+      <label for="new-content" class='greater' style="margin: 0 20px;">
+         <p class="greater" style="color: rgb(41, 90, 159)"> Content </p>
+         <textarea name="" id="new-content"
+            style="min-width: 100%; padding: 10px; box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; border: 2px solid; border-image-slice: 1; border-image-source: linear-gradient(to right bottom, #6a5af9, #f62682);"
+            rows="5"></textarea>
+      </label>
+
+      <button type="button" id="save-button" class="btn btn-outline-primary"
+         style="max-width: 25%; margin-left: 50%; transform: translateX(-50%);">
+         Save
+      </button>
+   </div>
+
+   <div id="extended-content" class="modal">
+      <div class="close-button"> &#10005; </div>
+
+      <div id="title" class="greater" style="padding: 20px"> </div>
+      <p id="content" style="padding: 20px"> </p>
+      <div style="display: flex; flex-flow: row; justify-content: center; gap: 10px">
+         <button type="button" class="btn btn-warning" id="modify-button"> Modify </button>
+         <button type="button" class="btn btn-danger" id="delete-button"> Delete </button>
+      </div>
+
+   </div>
+
+   <script type="module" src="../js/app.js"></script>
+</body>
+
+</html>

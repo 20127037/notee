@@ -1,0 +1,87 @@
+table {
+   border-collapse: collapse;
+   box-shadow: 0 2px 5px #d9e3f8;
+   background-color: white;
+   text-align: left;
+   overflow: hidden;
+}
+table thead {
+   box-shadow: 0 2px 5px #a8aab3;
+}
+table th {
+   padding: 1rem 2rem;
+   text-transform: uppercase;
+   letter-spacing: 0.1rem;
+   font-size: 18px;
+   font-weight: 900;
+}
+table td {
+   padding: 1rem 2rem;
+}
+table a {
+   text-decoration: none;
+   color: #2962ff;
+}
+table .status {
+   border-radius: 0.2rem;
+   background-color: red;
+   text-align: center;
+   margin: 0;
+}
+table .status-done {
+   background-color: #c8e6c9;
+   color: #388e3c;
+}
+table .status-undone {
+   background-color: #ffcdd2;
+   color: #c62828;
+}
+table .amount {
+   text-align: right;
+}
+table tr:nth-child(even) {
+   background-color: #f4f6fb;
+}
+
+table tbody tr {
+   cursor: pointer;
+}
+table tbody tr:hover {
+   background-color: rgb(221, 239, 249);
+}
+
+.modal {
+   width: 60vw; 
+   height: max-content; 
+   padding: 0 0 20px 0;
+   border-radius: 10px;
+   background: white; 
+   position: fixed; 
+   inset: 10vh 0 0 20vw; 
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+   display: flex;
+   flex-flow: column;
+   gap: 50px;
+   visibility: hidden;
+}
+
+.close-button {
+   position: absolute;
+   top: 18px;
+   right: 20px;
+   cursor: pointer;
+   font-size: 24px;
+}
+
+.dropdown {
+   display: none; 
+   width: max-content; 
+   height: max-content; 
+   padding: 20px 15px 0 15px; 
+   position: absolute; 
+   inset: 30px 0px 0px 80px; 
+   z-index: 1; 
+   background-color: white; 
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   border-radius: 5px;
+}
